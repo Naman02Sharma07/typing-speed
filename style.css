@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --bgColor: #333;
+    --textPrimary: #fff;
+    --textSecondary: #666;
+    --primaryColor: #fd4;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bgColor);
+    color: var(--textPrimary);
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Positioning the header at the top left */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* Styling the heading */
+h1 {
+    display: flex;
+    align-items: center;
+    color: var(--primaryColor);
+    font-size: 2rem;
+    margin: 0;
+}
+
+h1 svg {
+    width: 30px;
+    fill: var(--primaryColor);
+    margin-right: 10px; /* Adds spacing between icon and text */
+}
+
+/* Header section for word count and button */
+#header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin: 20px 6px 30px;
+}
+
+/* Word count styling */
+#info {
+    color: var(--primaryColor);
+    font-size: 1.2rem;
+}
+
+/* Button alignment to the right */
+#buttons {
+    margin-left: auto;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.2);
+    border: 0;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    padding: 8px 20px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+div#game{
+    line-height: 35px;
+    height: 105px;
+    overflow: hidden;
+}
+
+div.word{
+    display: inline-block;
+    font-family: 'Roboto Mono',monospace;
+    margin: 0 5px;
+}
