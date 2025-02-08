@@ -77,10 +77,58 @@ div#game{
     line-height: 35px;
     height: 105px;
     overflow: hidden;
+    position: relative;
 }
-
+#words{
+    filter: blur(5px);
+    transition: filter 0.3s ease; /* Smooth transition */
+    color: var(--textSecondary);
+}
+#game:focus #words{
+    filter: blur(0);
+}
 div.word{
     display: inline-block;
     font-family: 'Roboto Mono',monospace;
     margin: 0 5px;
+}
+#game #focus-error{
+    position: absolute;
+    inset: 0;
+    text-align: center;
+    padding-top: 35px;
+}
+#game:focus #focus-error{
+    display: none;
+}
+.letter.correct{
+    color: #fff;
+}
+.letter.incorrect{
+    color: #f55;
+}
+
+@keyframes blink {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+#cursor{
+    display: none;
+    width: 2px;
+    height: 1.6rem;
+    background: var(--primaryColor);
+    position: fixed;
+    top: 170px;
+    left: 23px;
+    animation: blink 0.8s infinite;
+}
+#game:focus #cursor{
+    display: block;
 }
